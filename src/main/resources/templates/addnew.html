@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AddNew</title>
+  <link data-th-href="@{/mainstyle.css}" rel="mainstyle">
+
+</head>
+
+<body>
+<div class="d1">
+  <h2>New Task</h2>
+  </br>
+
+  <form data-th-action="@{/index/addNew}" data-th-object="${todos}" method="post">
+
+    <label>ID</label>
+    </br>
+    <input class="c1" type="text" data-th-field="*{id}" />
+    </br>
+    </br>
+    <label>Task</label>
+    </br>
+    <input class="c1" type="text" data-th-field="*{content}" />
+    </br>
+    </br>
+    <label>Státusz:</label>
+    </br>
+    <select class="c1" name="status" data-th-field="*{status}">
+      <option data-th-each="status :"$open}
+              data-th-value="${status}" data-th-text="${distributionManagement.status}">
+
+
+    <td colspan="2"><button type="submit" value = "submit">Todo Hozzáadása</button></td>
+  </form>
+        </br>
+        </br>
+</div>
+
+</body>
+
+</html>

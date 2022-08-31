@@ -1,0 +1,39 @@
+body {
+    color: black;
+    margin: 0px;
+    width: 100%;
+    background: url(Clocks.jpg);
+    background-clip: border-box;
+}
+
+.a1 {
+    font-size: 30px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+.d1 {
+    font-size: 40px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+.c1 {
+    width: 170px;
+    height: 50px;
+}
+
+.my-4 {
+    font-size: 50px;
+}
+
+.table {
+    font-size: 40px;
+    color: gray;
+}
+
+.mask-custom {
+    background-clip: border-box;
+    padding: 35px;
+    margin-left: 130px;
+    margin-right: auto;
+
+}

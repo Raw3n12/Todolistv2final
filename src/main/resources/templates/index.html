@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link data-th-href="@{/mainstyle.css}" rel="mainstyle">
+</head>
+
+<body>
+<a class="a1" data-th-href="@{/index/createTempList}">Adding Test <Database></Database></a>
+
+<section class="vh-100 h-100 gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-12 col-xl-10">
+
+                <div class="card mask-custom">
+                    <div class="card-body p-4 text-white">
+
+                        <div class="text-center pt-3 pb-2">
+                            <h2 class="my-4">Task List</h2>
+                        </div>
+
+                        <table class="table text-white mb-0">
+                            <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Content</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr data-th-each="todo: ${todoList}" class="fw-normal">
+                                <td class="align-middle">
+                                    <span data-th-text="${todo.id}" ></span>
+                                </td>
+                                <td class="align-middle">
+                                    <span data-th-text="${todo.content}"></span>
+                                </td>
+
+                                <td class="align-middle">
+                                    <span data-th-text="${todo.status}"></span>
+                                <td>
+                                    <a data-th-href="@{/index/delTodo(id=${todo.id})}">Delete</a>
+                                </td>
+                                <td>
+                                    <a data-th-href="@{/create/updateStatus(id=${todo.id})}">Adjust Status</a>
+                                </td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a class="a1" data-th-href="@{index/addNew}">Add Todo</a>
+
+</body>
+
+</html>

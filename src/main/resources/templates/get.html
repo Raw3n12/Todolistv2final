@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+</head>
+
+<body>
+
+<h1>Todo</h1>
+<h2>DatabaseListDisplay</h2>
+<ul data-th-each="todo: ${todoList}">
+    <li data-th-text="${todo}"></li></br>
+    <a data-th-href="@{/create/updateStatus(id=${todo.id})}">UpdateStatus</a>
+    <a data-th-href="@{/create/deleteTodo(id=${todo.id})}">Delete</a>
+</ul>
+<a data-th-href="@{/create/setNew}">New</a>
+
+
+</body>
+
+</html>
